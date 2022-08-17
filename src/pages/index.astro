@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home">
+  <main>
+    <div class="hero">
+      <h1>Hi, I'm <span class="text-gradient">b0nz</span></h1>
+      <p>A Software Engineer specializing in Frontend Dev. Currently working at <a target="_blank" href="https://sinbad.co.id">Sinbad</a>, building amazing apps that empower Indonesia's independent retailers through technology.</p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, var(--color-blue), var(--color-pink));
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  a {
+    color: deeppink;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  a:hover {
+    text-decoration: revert;
+  }
+
+  main {
+    margin: auto;
+    padding: 2em;
+    max-width: 60ch;
+  }
+
+  .hero {
+    padding: 10rem 0;
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
+
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background: var(--color-blue);
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    border: 0.1em solid white;
+    border-radius: 4px;
+    padding: 0.15em 0.25em;
+  }
+</style>

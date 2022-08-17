@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    // Enable top-level await, and other modern ESM features.
+    "target": "ESNext",
+    "module": "ESNext",
+    // Enable node-style module resolution, for things like npm package imports.
+    "moduleResolution": "node",
+    // Enable JSON imports.
+    "resolveJsonModule": true,
+    // Enable stricter transpilation for better output.
+    "isolatedModules": true,
+    // Astro will directly run your TypeScript code, no transpilation needed.
+    "noEmit": true,
+    // Enable strict type checking.
+    "strict": true,
+    // Error when a value import is only used as a type.
+    "importsNotUsedAsValues": "error",
+    // Fix cannot find module astro-collab
+    "baseUrl": "./",
+    "paths": {
+      "astro-collab/LiveblocksRoom.astro": [
+        "node_modules/astro-collab/lib/LiveblocksRoom.astro"
+      ],
+      "astro-collab/LiveAvatars.astro": [
+        "node_modules/astro-collab/lib/LiveAvatars.astro"
+      ],
+      "astro-collab/LiveCursors.astro": [
+        "node_modules/astro-collab/lib/LiveCursors.astro"
+      ],
+      "astro-collab/LiveDrawing.astro": [
+        "node_modules/astro-collab/lib/LiveDrawing.astro"
+      ],
+      "astro-collab/LiveForm.astro": [
+        "node_modules/astro-collab/lib/LiveForm.astro"
+      ],
+      "astro-collab/LiveUserForm.astro": [
+        "node_modules/astro-collab/lib/LiveUserForm.astro"
+      ],
+      "astro-collab/LiveUsers.astro": [
+        "node_modules/astro-collab/lib/LiveUsers.astro"
+      ],
+      "astro-collab/RandomUserInfo.astro": [
+        "node_modules/astro-collab/lib/RandomUserInfo.astro"
+      ]
+    }
+  }
+}
