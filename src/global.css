@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-900 text-white font-sans;
+}
+
+/* nav */
+nav {
+  @apply sticky backdrop-blur-sm bg-slate-900/80 top-0 z-20 py-6 md:py-8;
+}
+nav ul {
+  @apply flex justify-center align-middle gap-4;
+}
+nav ul li a{
+  @apply text-yellow-300 text-lg font-bold no-underline hover:underline;
+}
+/* === */
+
+/* main */
+main {
+  @apply mx-auto max-w-screen-md py-8 px-8 md:px-0;
+}
+main p {
+  @apply text-justify;
+}
+main a {
+  @apply text-pink-500;
+}
+/* === */
+
+/* social */
+.social {
+  @apply flex align-middle gap-4 mt-4;
+}
+.social a {
+  @apply text-2xl text-white hover:text-pink-500;
+}
+/* === */
+
+/* hero */
+.hero {
+  @apply flex flex-col min-h-[40vh] justify-center align-middle;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.hero .hero-image {
+  @apply bg-cover bg-repeat absolute w-full h-[40vh] blur-[1.25px];
+  background-image: url('/hero.svg');
+}
+.hero .hero-text {
+  @apply text-center z-10 text-white;
+}
+.hero .hero-text h1 {
+  @apply text-4xl md:text-6xl font-bold mb-2;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* === */

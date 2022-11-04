@@ -4,8 +4,8 @@
     "importsNotUsedAsValues": "error",
     "baseUrl": ".",
     "paths": {
+      "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
       "@utils/*": ["src/utils/*"]
     }
   }
