@@ -3,21 +3,36 @@ import { Icon } from "astro-icon";
 
 import Hero from "@components/Hero.astro";
 import Layout from "@components/Layout.astro";
-import Nav from "@components/Nav.astro"
+import Nav from "@components/Nav.astro";
+import Timelines from "@/components/Timelines.astro";
 ---
 
 <Layout title="Home">
   <Nav />
   <Hero />
-  <main>
-    <p>Ellianto Sarono Putro a.k.a <a href="https://github.com/b0nz" target="_blank"><strong>b0nz</strong></a> is Software Engineer based in Surakarta, Central Java, Indonesia. Besides developing web applications (React.js), I also explore mobile applications (Kotlin & Flutter).</p>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/ellianto" target="_blank">
-        <Icon pack="fa" name="linkedin-square" size={18} />
-      </a>
-      <a href="https://github.com/b0nz" target="_blank">
-        <Icon pack="fa" name="github" size={18} />
-      </a>
+  <main class="content">
+    <div>
+      <p class="intro">
+        Ellianto Sarono Putro a.k.a <a
+          href="https://github.com/b0nz"
+          target="_blank"
+          ><strong>b0nz</strong>
+        </a> is Software Engineer based in Surakarta, Central Java, Indonesia. Besides
+        developing web applications (React.js), I also explore mobile applications
+        (Kotlin & Flutter).
+      </p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/ellianto" target="_blank">
+          <Icon pack="fa" name="linkedin-square" size={18} />
+        </a>
+        <a href="https://github.com/b0nz" target="_blank">
+          <Icon pack="fa" name="github" size={18} />
+        </a>
+        <a href="mailto:hi@b0nz.xyz" target="_blank">
+          <Icon pack="fa" name="envelope" size={18} />
+        </a>
+      </div>
     </div>
+    <Timelines />
   </main>
 </Layout>

@@ -8,25 +8,34 @@ body {
 
 /* nav */
 nav {
-  @apply sticky backdrop-blur-sm bg-slate-900/80 top-0 z-20 py-6 md:py-8;
+  @apply sticky backdrop-blur-lg bg-slate-900/80 top-0 z-20 py-6 pb-8 md:py-8 md:pb-10;
 }
 nav ul {
   @apply flex justify-center align-middle gap-4;
 }
-nav ul li a{
-  @apply text-yellow-300 text-lg font-bold no-underline hover:underline;
+nav ul li a {
+  @apply text-yellow-300 text-lg font-bold no-underline hover:underline underline-offset-4 decoration-wavy;
+}
+nav ul li a.active {
+  @apply text-white underline;
 }
 /* === */
 
-/* main */
+/* main & content */
 main {
-  @apply mx-auto max-w-screen-md py-8 px-8 md:px-0;
+  @apply mx-auto max-w-screen-md py-16 px-8 md:px-0;
 }
 main p {
   @apply text-justify;
 }
-main a {
+main .intro a {
   @apply text-pink-500;
+}
+main a {
+  @apply text-white hover:text-pink-500;
+}
+.content {
+  @apply flex flex-col gap-16;
 }
 /* === */
 
@@ -48,7 +57,7 @@ main a {
 }
 .hero .hero-image {
   @apply bg-cover bg-repeat absolute w-full h-[40vh] blur-[1.25px];
-  background-image: url('/hero.svg');
+  background-image: url("/hero.svg");
 }
 .hero .hero-text {
   @apply text-center z-10 text-white;
