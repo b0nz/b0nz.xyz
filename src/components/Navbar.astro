@@ -1,0 +1,26 @@
+---
+const pages = {
+  home: {
+    url: '/',
+    title: 'Home'
+  },
+  projects: {
+    url: '/projects',
+    title: 'Projects'
+  },
+}
+const requestPathname = new URL(Astro.request.url).pathname;
+---
+
+<nav>
+  <ul>
+    {Object.values(pages).map(page => {
+      const className = requestPathname === page.url && "active";
+      return(
+        <li>
+          <a class={className} href={page.url}>{page.title}</a>
+        </li>
+      )
+    })}
+  </ul>
+</nav>

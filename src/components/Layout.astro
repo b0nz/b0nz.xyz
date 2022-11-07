@@ -1,6 +1,6 @@
 ---
-import Analytic from "@components/Analytic.astro";
-import Hotjar from "@components/Hotjar.astro";
+import Hotjar from '@components/Analytics/Hotjar.astro'
+import GoogleAnalytic from '@components/Analytics/GoogleAnalytic.astro'
 import "@/global.css";
 
 export interface Props {
@@ -21,6 +21,6 @@ const { title } = Astro.props as Props;
   <body>
     <slot />
     <Hotjar id="3231992" version="6" />
-    <Analytic id="G-GJ095DX49C" />
+    <GoogleAnalytic id="G-GJ095DX49C" />
   </body>
 </html>
