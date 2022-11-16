@@ -1,6 +1,7 @@
 ---
 import { inject } from '@vercel/analytics';
 import "@/global.css";
+import GoogleAnalytic from './Analytics/GoogleAnalytic.astro';
 
 export interface Props {
   title: string;
@@ -20,5 +21,6 @@ inject();
   </head>
   <body>
     <slot />
+    <GoogleAnalytic id="UA-146465180-1" />
   </body>
 </html>
