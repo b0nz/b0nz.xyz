@@ -3,29 +3,56 @@ import Layout from "@components/Layout.astro";
 import Navbar from "@components/Navbar.astro";
 
 const posts = await Astro.glob('./*.md');
+const closedSource = posts.filter(post => post.frontmatter.sub === 'closed');
+const openSource = posts.filter(post => post.frontmatter.sub === 'open');
 ---
 
 <Layout title="Projects">
   <Navbar />
   <main>
-    <h3 class="text-2xl font-bold mb-4"># Learning</h3>
-    <div>
-      {posts.map(post => (
-        <div class="border border-white rounded-md">
-          <div class={`w-full h-32 rounded-t-md bg-slate-800 bg-cover`} style={{ backgroundImage: `url(${post.frontmatter.cover})` }} />
-          <div class="p-4">
-            <a class="text-lg font-bold" href={post.frontmatter.source} target="_blank">
-              {post.frontmatter.title}
-            </a>
-            <div class="flex flex-wrap text-sm">
-              {post.frontmatter.tags.split(',').map(tag => (
-                <span class="mr-2 mt-2 bg-slate-500 rounded-full py-1 px-2">{tag}</span>
-              ))}
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-4">
+        <h3 class="text-2xl font-bold mb-4"># Learning</h3>
+        <div>
+          {openSource.map(post => (
+            <div class="border border-white rounded-md">
+              <div class={`w-full h-32 rounded-t-md bg-slate-800 bg-cover`} style={{ backgroundImage: `url(${post.frontmatter.cover})` }} />
+              <div class="p-4">
+                <a class="text-lg font-bold" href={post.frontmatter.source} target="_blank">
+                  {post.frontmatter.title}
+                </a>
+                <div class="flex flex-wrap text-sm">
+                  {post.frontmatter.tags.split(',').map(tag => (
+                    <span class="mr-2 mt-2 bg-slate-500 rounded-full py-1 px-2">{tag}</span>
+                  ))}
+                </div>
+                <p class="text-left mt-4">{post.frontmatter.description}</p>
+              </div>
             </div>
-            <p class="text-left mt-4">{post.frontmatter.description}</p>
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-4"># Work</h3>
+        <div class="flex flex-col gap-4">
+          {closedSource.map(post => (
+            <div class="border border-white rounded-md">
+              <div class={`w-full h-32 rounded-t-md bg-slate-800 bg-cover`} style={{ backgroundImage: `url(${post.frontmatter.cover})` }} />
+              <div class="p-4">
+                <a class="text-lg font-bold" href={post.frontmatter.source} target="_blank">
+                  {post.frontmatter.title}
+                </a>
+                <div class="flex flex-wrap text-sm">
+                  {post.frontmatter.tags.split(',').map(tag => (
+                    <span class="mr-2 mt-2 bg-slate-500 rounded-full py-1 px-2">{tag}</span>
+                  ))}
+                </div>
+                <p class="text-left mt-4">{post.frontmatter.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   </main>
 </Layout>
