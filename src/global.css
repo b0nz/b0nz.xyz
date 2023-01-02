@@ -23,7 +23,10 @@ nav ul li a.active {
 
 /* main & content */
 main {
-  @apply mx-auto max-w-screen-md py-16 px-8 md:px-0;
+  @apply mx-auto max-w-screen-md py-4 px-8 md:px-0;
+}
+main.home {
+  @apply py-16;
 }
 main p {
   @apply text-justify;
