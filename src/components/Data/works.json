@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Evomo - OEE",
+    "image": "assets/oee.png",
+    "tags": ["React", "Redux", "AntDesign", "StyledComponents", "ECharts", "ApexChart"]
+  },
+  {
+    "title": "Evomo - EMS Web",
+    "image": "assets/ems-web.png",
+    "tags": ["React", "Redux", "Typescript", "AntDesign", "StyledComponents", "ECharts", "ApexChart", "TailwindCSS"]
+  },
+  {
+    "title": "Evomo - EMS Mobile",
+    "image": "assets/ems-mobile.png",
+    "tags": ["React Native", "Redux", "Typescript", "StyledComponents"]
+  },
+  {
+    "title": "Bitwyre - OTC",
+    "image": "assets/otc.png",
+    "tags": ["React", "Redux", "Typescript", "MaterialUI"]
+  },
+  {
+    "title": "Bitwyre - Futures",
+    "image": "assets/futures.png",
+    "tags": ["React", "Redux", "Typescript", "MaterialUI"]
+  },
+  {
+    "title": "Bitwyre - Options",
+    "image": "assets/options.png",
+    "tags": ["React", "Redux", "Typescript", "MaterialUI"]
+  },
+  {
+    "title": "Bitwyre - Mobile",
+    "image": "assets/bitwyre-mobile.png",
+    "tags": ["React", "ReactNative", "Redux", "Typescript"]
+  }
+]
