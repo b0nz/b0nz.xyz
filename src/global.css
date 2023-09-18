@@ -34,7 +34,7 @@ nav {
   @apply sticky backdrop-blur-lg bg-slate-900/80 top-0 z-20 py-6 pb-8 md:py-8 md:pb-10;
 }
 nav ul {
-  @apply text-white flex justify-center align-middle gap-4;
+  @apply text-white flex justify-center align-middle gap-8;
 }
 nav ul li a {
   @apply text-lg font-bold no-underline hover:underline underline-offset-4 decoration-wavy;
