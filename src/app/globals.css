@@ -1,27 +1,108 @@
 @tailwind base;
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0f172a #374151;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0f172a;
+  border-radius: 14px;
+  border: 3px solid #374151;
+}
+
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  @apply bg-slate-900 text-white font-sans;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* nav */
+nav {
+  @apply sticky backdrop-blur-lg bg-slate-900/80 top-0 z-20 py-6 pb-8 md:py-8 md:pb-10;
+}
+nav ul {
+  @apply text-white flex justify-center align-middle gap-8;
+}
+nav ul li a {
+  @apply text-lg font-bold no-underline hover:underline underline-offset-4 decoration-wavy;
+}
+nav ul li a.active {
+  @apply text-yellow-300 underline;
+}
+/* === */
+
+/* main & content */
+main {
+  @apply mx-auto max-w-screen-md py-4 px-8 md:px-0;
+}
+main.home {
+  @apply py-16;
+}
+main p {
+  @apply text-justify;
+}
+main .intro a {
+  @apply text-pink-500;
+}
+main a {
+  @apply text-white hover:text-pink-500;
+}
+.content {
+  @apply flex flex-col gap-16;
+}
+/* === */
+
+/* social */
+.social {
+  @apply flex align-middle gap-4 mt-4;
+}
+.social a {
+  @apply text-2xl text-white hover:text-pink-500;
+}
+/* === */
+
+/* hero */
+.hero {
+  @apply flex flex-col min-h-[20vh] md:min-h-[30vh] justify-center align-middle;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.hero .hero-image {
+  @apply bg-cover bg-repeat absolute w-full h-[20vh] md:h-[30vh] blur-[1.25px];
+  background-image: url("/hero.svg");
+}
+.hero .hero-text {
+  @apply text-center z-10 text-white;
+}
+.hero .hero-text h1 {
+  @apply text-3xl md:text-6xl font-bold mb-1 md:mb-4;
+}
+.hero .hero-text h3 {
+  @apply text-base md:text-xl font-normal mb-0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+/* === */
