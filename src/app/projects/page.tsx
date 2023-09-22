@@ -13,7 +13,7 @@ export default function ProjectsPage() {
       <Navbar />
       <main className="content">
         <div>
-          <h3 className="text-2xl font-bold mb-4"># Works</h3>
+          <h3 className="text-2xl font-bold mb-4"># Projects</h3>
           <Projects />
         </div>
       </main>
